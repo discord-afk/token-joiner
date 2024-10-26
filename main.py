@@ -183,7 +183,8 @@ class Human:
                     TitleWorkerr() 
                     
         elif r.status_code == 200:
-                res = self.client.post(f"https://discord.com/api/v9/invites/{invite}", json={'session_id': ''.join(random.choice(string.ascii_lowercase) + random.choice(string.digits) for _ in range(16))})
+                ses = ''.join(random.choice(string.ascii_lowercase) + random.choice(string.digits) for _ in range(16))
+                res = self.client.post(f"https://discord.com/api/v9/invites/{invite}", json={'session_id': ses})
                 if res.status_code == 200:
                     Logger.Success(f'Joined Server -> {invite} | {Fore.LIGHTWHITE_EX} {token[:32]} ')
                     with open(f"{output_folder}/Joined.txt", "a") as f:
@@ -191,9 +192,8 @@ class Human:
                             checked = checked +1
                             TitleWorkerr() 
                     success =success +1
-                    checked = checked +1
                     TitleWorkerr()
-                elif "captcha_key" in r.text:
+                elif "captcha_key" in res.text:
                     Logger.Info(f'Captcha -> {Fore.LIGHTWHITE_EX}{token[:32]}')
                     with open(f"{output_folder}/captcha.txt", "a") as f:
                             f.write(email+":"+password + ":"+token+ "\n") 
