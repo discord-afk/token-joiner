@@ -248,7 +248,7 @@ if __name__ == "__main__":
                             /_/ /_____/_/  |_/_/  /_/     /_/  |_/___/  
                             
                             
-            server = https://discord.gg/recaptcha       discord = tunable1
+            server = https://discord.gg/recaptcha       discord = tunable1 | Nikhil.frr
           """)
     print(pystyle.Center.XCenter(pystyle.Colorate.Vertical(text=k, color=pystyle.Colors.green_to_white), spaces=15))
     thread = input(' [INFO] Thread-> ')
