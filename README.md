@@ -18,6 +18,5 @@ Feel free to contribute and improve the project!
 ## Support
 
 discord - https://discord.gg/recaptcha
-          https://discord.gg/canary
 telegram - https://t.me/TeamAiIndia
 instagram - TeamAi_India
